@@ -1,12 +1,13 @@
 import React from "react";
 import { useState } from "react";
 
-function Filter({ onCategoryChange }) {
+function Filter({ onCategoryChange, onSearchChange }) {
 
-  const [searchItem, setSearchItem] = useState('');
-  const handleChange = (e) => {
+  const [searchItem, setSearchItem] = useState("");
+
+  function handleChange(e) {
     setSearchItem(e.target.value);
-    console.log(searchItem);
+    onSearchChange(e);
   }
 
   return (
