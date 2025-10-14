@@ -18,8 +18,6 @@ function ShoppingList({ items }) {
     if (selectedCategory === "All" && searchedCategory === "") return true;
     if (item.category === selectedCategory) return item.category;
     if (item.name === searchedCategory) return item.name;
-
-    //return item.category === selectedCategory;
   });
 
   return (
