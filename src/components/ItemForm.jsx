@@ -2,11 +2,10 @@ import React from "react";
 import { v4 as uuid } from "uuid";
 import { useState } from "react";
 
-function ItemForm({onItemName, onItemCat, handleSubmit}) {
-
+function ItemForm({onItemName, onItemCat, onItemFormSubmit}) {
 
   return (
-    <form className="NewItem" onSubmit={handleSubmit}>
+    <form className="NewItem" onSubmit={onItemFormSubmit}>
       <label>
         Name:
         <input type="text" name="name" onChange={onItemName}/>
