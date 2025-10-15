@@ -36,7 +36,7 @@ function ShoppingList({ items, addNewItems }) {
   const itemsToDisplay = items.filter((item) => {
     if (selectedCategory === "All" && searchedCategory === "") return true;
     if (item.category === selectedCategory) return item.category;
-    if (item.name === searchedCategory) return item.name;
+    if (item.name.toLowerCase().includes(searchedCategory.toLowerCase())) return item.name;
   });
 
   return (
