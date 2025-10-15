@@ -17,7 +17,6 @@ function ShoppingList({ items, addNewItems }) {
   }
   function handleNewName(event) {
     setNewItemName(event.target.value);
-    console.log(newItemName);
   }
   function handleNewItemCat(event) {
     setNewItemCat(event.target.value);
@@ -28,8 +27,9 @@ function ShoppingList({ items, addNewItems }) {
     const newItem = {
       id: items.length + 1,
       name: newItemName,
-      categorty: newItemCat,
+      category: newItemCat,
     };
+    console.log(newItem)
     addNewItems(newItem)
   }
 
